@@ -1,0 +1,21 @@
+{
+  "name": "pgats-web",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Paulo Roberto de Souza",
+  "license": "ISC",
+  "description": "Projeto da disciplina de Automação WEB da PGATS",
+  "dependencies": {
+    "cypress": "^13.7.3",
+    "cypress-plugin-xhr-toggle": "^1.2.1",
+    "pgats-web": "file:"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^8.4.1",
+    "cypress-mochawesome-reporter": "^3.8.2"
+  }
+}
