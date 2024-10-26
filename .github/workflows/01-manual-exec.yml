@@ -38,5 +38,6 @@ jobs:
       - uses: actions/upload-artifact@v4
         if: ${{ !cancelled() }}
         with:
-          name: relatorio-de-testes
-          path: .\reports\html\index.html
+          name: relatorio-de-testes          
+          path: ./cypress/reports/html/index.html
+
