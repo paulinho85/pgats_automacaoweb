@@ -39,4 +39,4 @@ jobs:
         if: ${{ !cancelled() }}
         with:
           name: relatorio-de-testes
-          path: ./results
+          path: .\reports\html\index.html
