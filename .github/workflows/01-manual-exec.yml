@@ -1,0 +1,42 @@
+# CI de Nível 01 - Disparo manual a partir de 1 clique
+
+# Nome que vai aparecer nas opções de pipe
+name: 'Execução Manual'
+
+# Regras de disparo da execução (Triggers/Gatilhos)
+# Gatilho de execução manual = workflow_dispatch
+
+on:
+  workflow_dispatch:
+
+jobs:
+  # Descrição do Job
+  e2e-tests:
+    # Máquina que o job vai executar
+    runs-on: ['ubuntu-latest']
+
+    # Passo-a-passo das ações do job
+    steps:
+      - uses: actions/checkout@v4
+
+      # - uses: actions/setup-node@v4
+      #     with:
+      #         node-version: lts/*
+
+      - name: Instalando Yarn
+        run: npm install -g yarn
+
+      - name: Instalando dependências
+        run: yarn
+
+      - name: Instalando Playwright
+        run: yarn cypress install
+
+      - name: Testes E2E
+        run: yarn run e2e
+
+      - uses: actions/upload-artifact@v4
+        if: ${{ !cancelled() }}
+        with:
+          name: relatorio-de-testes
+          path: ./results

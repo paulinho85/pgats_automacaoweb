@@ -99,7 +99,7 @@ describe('Automation Exercise', () => {
     });
 
 
-    it('Test Case 15: Place Order: Register before Checkout', () => {
+    it.only('Test Case 15: Place Order: Register before Checkout', () => {
         menu.irParaLoginCadastro();       
         cadastro
             .preencherFormulario()
