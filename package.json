@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "npx cypress run"
+    "e2e": "npx cypress run"
   },
   "keywords": [],
   "author": "Paulo Roberto de Souza",
